@@ -1,5 +1,12 @@
 {
   "name": "hellocrm",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.3.1",
+    "admin-lte": "^2.4.8",
+    "chosen-js": "^1.8.7",
+    "daterangepicker": "^3.0.3",
+    "fullcalendar": "^3.9.0",
+    "pnotify": "3.2.1"
+  }
 }

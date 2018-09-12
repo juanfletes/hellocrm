@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_04_034234) do
+ActiveRecord::Schema.define(version: 2018_09_12_022051) do
+
+  create_table "catalogs", force: :cascade do |t|
+    t.string "code", limit: 10, null: false
+    t.string "parent_code", limit: 10
+    t.string "name", limit: 250, null: false
+    t.string "description", limit: 500
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_catalogs_on_code", unique: true
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string "name", limit: 1000, null: false
+    t.string "city", limit: 10, null: false
+    t.string "direction", limit: 5000
+    t.string "observation", limit: 5000
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

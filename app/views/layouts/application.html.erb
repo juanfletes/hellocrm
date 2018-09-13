@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= render "layouts/head" %>
-  </head>
-  <body class="sidebar-mini fixed">
-    <div class="wrapper">
-     <%= render "layouts/header" %>
-     <%= render "layouts/sidebar" %>
-      <div class="content-wrapper">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="main-header">
-              <h4><%= content_for :content_header %></h4>
-            </div>
-          </div>
-          <%= yield %>
+<head>
+  <%= render "layouts/head" %>
+</head>
+<body class="sidebar-mini fixed">
+  <div class="wrapper">
+   <%= render "layouts/header" %>
+   <%= render "layouts/sidebar" %>
+   <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="main-header">
+          <h4><%= content_for :content_header %></h4>
         </div>
       </div>
-      <%= render "layouts/footer" %>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-block">
+              <div class="md-card-block">
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+  <%= render "layouts/footer" %>
+</div>
+</body>
 </html>

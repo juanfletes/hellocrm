@@ -1,7 +1,4 @@
 {
   "name": "hellocrm",
-  "private": true,
-  "dependencies": {
-    "admin-lte": "^2.4.8"
-  }
+  "private": true
 }

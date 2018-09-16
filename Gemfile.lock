@@ -214,6 +214,8 @@ GEM
     selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    simple-line-icons-rails (0.1.5)
+      railties (>= 3.2, < 5.3)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -273,6 +275,7 @@ DEPENDENCIES
   rubocop (~> 0.58.2)
   sass-rails (~> 5.0)
   selenium-webdriver
+  simple-line-icons-rails
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

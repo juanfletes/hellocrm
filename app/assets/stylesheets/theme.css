@@ -1,5 +1,7 @@
-/* theme/main.css
-
+/*
+*= require theme/main
+*= require_self
+*/
 .card-block {
   padding: 1.25rem;
 }

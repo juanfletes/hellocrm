@@ -13,35 +13,7 @@ $(window).on('load', function() {
             break;
         }
     }, 2500);
-
-    //Welcome Message (not for login page)
-    function notify(message, type) {
-        $.growl({
-            message: message
-        }, {
-            type: type,
-            allow_dismiss: false,
-            label: 'Cancel',
-            className: 'btn-xs btn-inverse',
-            placement: {
-                from: 'bottom',
-                align: 'right'
-            },
-            delay: 2500,
-            animate: {
-                enter: 'animated fadeInRight',
-                exit: 'animated fadeOutRight'
-            },
-            offset: {
-                x: 30,
-                y: 30
-            }
-        });
-    };
-
-    notify('Welcome to Able Admin', 'inverse');
     $('.loader-bg').fadeOut('slow');
-
 });
 // function removeloader(){
 //     $('.loader-bg').fadeOut('slow', function() {
@@ -123,14 +95,6 @@ $('[data-toggle="popover"]').popover({
     }
 });
 
-
-// wave effect js
-
-Waves.init();
-Waves.attach('.flat-buttons', ['waves-button']);
-Waves.attach('.float-buttons', ['waves-button', 'waves-float']);
-Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
-Waves.attach('.flat-buttons', ['waves-button', 'waves-float', 'waves-light', 'flat-buttons']);
 
 // side button js code start
 $.pushMenu = {
@@ -221,66 +185,6 @@ $.tree = function(menu) {
 $.tree('.sidebar');
 $.pushMenu.activate("[data-toggle='offcanvas']");
 // side button js code end
-
-
-/* Search header start */
-(function() {
-    var isAnimating;
-    var morphSearch = document.getElementById('morphsearch'),
-        input = morphSearch.querySelector('input.morphsearch-input'),
-        ctrlClose = morphSearch.querySelector('span.morphsearch-close'),
-        isOpen = isAnimating = false,
-        isHideAnimate = morphsearch.querySelector('.morphsearch-form'),
-        // show/hide search area
-        toggleSearch = function(evt) {
-            // return if open and the input gets focused
-            if (evt.type.toLowerCase() === 'focus' && isOpen) return false;
-
-            var offsets = morphsearch.getBoundingClientRect();
-            if (isOpen) {
-                classie.remove(morphSearch, 'open');
-
-                // trick to hide input text once the search overlay closes
-                // todo: hardcoded times, should be done after transition ends
-                //if( input.value !== '' ) {
-                setTimeout(function() {
-                    classie.add(morphSearch, 'hideInput');
-                    setTimeout(function() {
-                        classie.add(isHideAnimate, 'p-absolute');
-                        classie.remove(morphSearch, 'hideInput');
-                        input.value = '';
-                    }, 300);
-                }, 500);
-                //}
-
-                input.blur();
-            } else {
-                classie.remove(isHideAnimate, 'p-absolute');
-                classie.add(morphSearch, 'open');
-            }
-            isOpen = !isOpen;
-        };
-
-    // events
-    input.addEventListener('focus', toggleSearch);
-    ctrlClose.addEventListener('click', toggleSearch);
-    // esc key closes search overlay
-    // keyboard navigation events
-    document.addEventListener('keydown', function(ev) {
-        var keyCode = ev.keyCode || ev.which;
-        if (keyCode === 27 && isOpen) {
-            toggleSearch(ev);
-        }
-    });
-    var morphSearch_search = document.getElementById('morphsearch-search');
-    morphSearch_search.addEventListener('click', toggleSearch);
-
-    /***** for demo purposes only: don't allow to submit the form *****/
-    morphSearch.querySelector('button[type="submit"]').addEventListener('click', function(ev) {
-        ev.preventDefault();
-    });
-})();
-/* Search header end */
 
 // toggle full screen
 function toggleFullScreen() {

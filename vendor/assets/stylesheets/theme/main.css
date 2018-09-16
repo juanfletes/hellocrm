@@ -23,13 +23,6 @@ File: main.css
 	- Responsive media class
 
 ============= */
-@import url("../plugins/waves/waves.min.css");
-@import url("../plugins/notification/css/animate.min.css");
-@import url("../plugins/notification/css/notification.css");
-@import url("../plugins/search/css/component.css");
-@import url("generic-class.min.css");
-@import url("svg-weather.css");
-@import url("menu.css");
 body {
   font-size: 15px;
   overflow-x: hidden;
@@ -1128,19 +1121,19 @@ textarea {
     color: #777; }
 
 .error-500 h1 {
-  background: url("../images/500@2x.png") no-repeat center; }
+  background: url("/assets/theme/500@2x.png") no-repeat center; }
 
 .error-503 h1 {
-  background: url("../images/503@2x.png") no-repeat center; }
+  background: url("/assets/theme/503@2x.png") no-repeat center; }
 
 .error-404 h1 {
-  background: url("../images/404@2x.png") no-repeat center; }
+  background: url("/assets/theme/404@2x.png") no-repeat center; }
 
 .error-400 h1 {
-  background: url("../images/400@2x.png") no-repeat center; }
+  background: url("/assets/theme/400@2x.png") no-repeat center; }
 
 .error-403 h1 {
-  background: url("../images/403@2x.png") no-repeat center; }
+  background: url("/assets/theme/403@2x.png") no-repeat center; }
 
 /*======================
   Breadcrumb
@@ -1293,7 +1286,7 @@ Basic card CSS
  ======================= */
 .common-img-bg {
   height: 100%;
-  background: url("../images/authentication-bg.jpg") no-repeat;
+  background: url("/assets/theme/authentication-bg.jpg") no-repeat;
   background-size: cover; }
 
 .login {
@@ -2808,7 +2801,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
     Coming soon page css start
 ======================= */
 .coming {
-  background: url("../images/masterhome.jpg") no-repeat;
+  background: url("/assets/theme/masterhome.jpg") no-repeat;
   background-size: cover;
   position: fixed;
   height: 100%;
@@ -4970,7 +4963,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
   border-radius: 50%; }
 
 .user-block-2 {
-  background-image: url("../images/widget/user-block-2.jpg");
+  background-image: url("/assets/theme/widget/user-block-2.jpg");
   background-size: cover;
   padding: 20px 0;
   color: #fff;
@@ -4997,7 +4990,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 
 /*Clock css*/
 #clock {
-  background-image: url("../images/widget/clock-bg.png");
+  background-image: url("/assets/theme/widget/clock-bg.png");
   height: 160px;
   position: relative;
   width: 160px;
@@ -5253,7 +5246,7 @@ input[type="checkbox"].green.ios-switch:checked + div > div {
 
 /*Weather block css*/
 .weather-bg {
-  background-image: url("../images/widget/weather-bg.jpg");
+  background-image: url("/assets/theme/widget/weather-bg.jpg");
   background-size: cover;
   padding: 20px 0;
   color: #fff; }

@@ -1,26 +1,73 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <%= render "layouts/head" %>
+</head>
+<body class="sidebar-mini fixed">
+  <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+    <!-- Container-fluid starts -->
+    <div class="container-fluid">
+      <div class="row">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <div class="col-sm-12">
+          <div class="login-card card-block mx-auto">
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'md-float-material') do |f| %>
+            <div class="text-center">
+              <img src="/assets/theme/logo-blue.png" alt="logo">
+            </div>
+            <h3 class="text-center txt-primary">
+              Sign In to your account
+            </h3>
+            <div class="md-input-wrapper">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'md-form-control' %>
+              <%= f.label :email %>
+            </div>
+            <div class="md-input-wrapper">
+              <%= f.password_field :password, autocomplete: "current-password", class: 'md-form-control' %>
+              <%= f.label :password %>
+            </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+            <div class="row">
+              <div class="col-10 offset-1">
+                <%= f.submit "Log in", class: 'btn btn-primary btn-md btn-block waves-effect text-center m-b-20' %>
+              </div>
+            </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+            <div class="row pt-4">
+              <div class="col-sm-6 col-12">
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+                <div class="rkmd-checkbox checkbox-rotate checkbox-ripple m-b-25">
+                  <% if devise_mapping.rememberable? -%>
+                  <div class="field">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
+                  </div>
+                  <% end -%>
+                </div>
 
-<%= render "devise/shared/links" %>
+              </div>
+            </div>
+
+            <!-- <div class="card-footer"> -->
+              <div class="row">
+                <div class="col-sm-12 col-12 text-center">
+                  <%= render "devise/shared/links" %>
+                </div>
+              </div>
+
+              <!-- </div> -->
+              <% end %>
+              <!-- end of form -->
+            </div>
+            <!-- end of login-card -->
+          </div>
+          <!-- end of col-sm-12 -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container-fluid -->
+    </section>
+  </body>
+  </html>
+
+

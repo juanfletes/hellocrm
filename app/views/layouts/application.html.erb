@@ -9,9 +9,12 @@
    <%= render "layouts/sidebar" %>
    <div class="content-wrapper">
     <div class="container-fluid">
+      <div class="pt-1">
+        <%= render "layouts/flash" %>
+      </div>
       <div class="row">
         <div class="main-header">
-          <h4><%= content_for :content_header %></h4>
+          <h4><%= content_for :page_title %></h4>
         </div>
       </div>
       <div class="row">

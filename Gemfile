@@ -39,7 +39,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise', '~> 4.5'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.3'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'simple-line-icons-rails'
 
 group :development, :test do

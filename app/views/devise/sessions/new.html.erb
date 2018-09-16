@@ -3,12 +3,14 @@
 <head>
   <%= render "layouts/head" %>
 </head>
-<body class="sidebar-mini fixed">
+<body class="fixed">
   <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
     <!-- Container-fluid starts -->
     <div class="container-fluid">
+      <div class="pt-1">
+        <%= render "layouts/flash" %>
+      </div>
       <div class="row">
-
         <div class="col-sm-12">
           <div class="login-card card-block mx-auto">
             <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: 'md-float-material') do |f| %>
@@ -47,27 +49,23 @@
 
               </div>
             </div>
-
-            <!-- <div class="card-footer"> -->
-              <div class="row">
-                <div class="col-sm-12 col-12 text-center">
-                  <%= render "devise/shared/links" %>
-                </div>
+            <div class="row">
+              <div class="col-sm-12 col-12 text-center">
+                <%= render "devise/shared/links" %>
               </div>
-
-              <!-- </div> -->
-              <% end %>
-              <!-- end of form -->
             </div>
-            <!-- end of login-card -->
+            <% end %>
+            <!-- end of form -->
           </div>
-          <!-- end of col-sm-12 -->
+          <!-- end of login-card -->
         </div>
-        <!-- end of row -->
+        <!-- end of col-sm-12 -->
       </div>
-      <!-- end of container-fluid -->
-    </section>
-  </body>
-  </html>
+      <!-- end of row -->
+    </div>
+    <!-- end of container-fluid -->
+  </section>
+</body>
+</html>
 
 

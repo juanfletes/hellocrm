@@ -13,7 +13,7 @@
         <li class="dropdown">
           <a href="#!" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle drop icon-circle drop-image">
             <span><img class="img-circle " src="assets/theme/avatar-1.png" style="width:40px;" alt="User Image"></span>
-            <span>John <b>Doe</b> <i class=" icofont icofont-simple-down"></i></span>
+            <span><%= current_user.email %> <i class="fas fa-angle-down"></i></span>
 
           </a>
           <ul class="dropdown-menu settings-menu">
@@ -24,7 +24,7 @@
               <div class="dropdown-divider m-0"></div>
             </li>
             <li><a href="lock-screen.html"><i class="icon-lock"></i> Lock Screen</a></li>
-            <li><a href="#!"><i class="icon-logout"></i> Logout</a></li>
+            <li><a href="<%= destroy_user_session_path %>" data-method="delete"><i class="icon-logout"></i> Logout</a></li>
           </ul>
         </li>
       </ul>

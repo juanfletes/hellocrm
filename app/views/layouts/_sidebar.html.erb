@@ -5,9 +5,9 @@
         <div class="user-panel">
             <div class="f-left image"><img src="assets/theme/avatar-1.png" alt="User Image" class="img-circle"></div>
             <div class="f-left info">
-                <p>User</p>
+                <p><%= current_user.email %></p>
                 <p class="designation">User Role
-                  <i class="icofont icofont-caret-down m-l-5"></i>
+                  <i class="fas fa-angle-down"></i>
                 </p>
             </div>
         </div>
@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li>
-                <a class="waves-effect waves-dark" href="javascript:void(0)">
+                <a class="waves-effect waves-dark" href="<%= destroy_user_session_path %>" data-method="delete">
                     <i class="icon-logout"></i>
                     <span class="menu-text">Logout</span>
                     <span class="selected"></span>

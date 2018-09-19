@@ -1,0 +1,4 @@
+es:
+  customers:
+    index:
+      title: "Lista de clientes"

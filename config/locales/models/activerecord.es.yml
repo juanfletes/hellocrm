@@ -1,0 +1,13 @@
+es:
+  activerecord:
+    models:
+      customers:
+        one: "cliente"
+        other: "clientes"
+    attributes:
+      customer:
+        name: "Nombre"
+        city: "ciudad"
+        direction: "dirección"
+        observation: "observación"
+        active: "activo"

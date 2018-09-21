@@ -22,9 +22,9 @@
         <td><%= customer.direction %></td>
         <td><%= customer.observation %></td>
         <td><%= customer.active %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('action.show'), customer %></td>
+        <td><%= link_to t('action.edit'), edit_customer_path(customer) %></td>
+        <td><%= link_to t('action.destroy'), customer, method: :delete, data: { confirm: t('message.confirm_destroy') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to t('action.new'), new_customer_path %>

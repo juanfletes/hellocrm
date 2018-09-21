@@ -1,2 +1,12 @@
 es:
   hello: "Hola Mundo"
+  action:
+    show: "Mostrar"
+    new: "Nuevo"
+    edit: "Editar"
+    back: "Regresar"
+    save: "Guardar"
+    update: "Actualizar"
+    destroy: "Borrar"
+  message:
+    confirm_destroy: "Seguro de Eliminar"

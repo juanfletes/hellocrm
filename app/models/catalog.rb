@@ -19,8 +19,13 @@ class Catalog < ApplicationRecord
 
   validates :description, length: { maximum: 500 }
 
-  belongs_to :rel_catalog, class_name: 'Catalog', foreign_key: 'parent_code', primary_key: 'code'
+  belongs_to :rel_catalog, class_name: 'Catalog',
+                           foreign_key: 'parent_code',
+                           primary_key: 'code',
+                           optional: true
 
-  has_many :rel_customer, class_name: 'Customer', foreign_key: 'city', primary_key: 'code'
+  has_many :rel_customer, class_name: 'Customer',
+                          foreign_key: 'city',
+                          primary_key: 'code'
 
 end

@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :code %>
-    <%= form.text_field :code %>
+    <%= form.text_field :code, { class: 'form-control'} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :parent_code %>
-    <%= form.text_field :parent_code %>
+    <%= form.text_field :parent_code, { class: 'form-control'} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, { class: 'form-control'} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_field :description, { class: 'form-control'} %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :active %>
     <%= form.check_box :active %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit t('action.save'), { class: 'btn btn-primary'} %>
   </div>
 <% end %>

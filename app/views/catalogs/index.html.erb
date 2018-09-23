@@ -1,15 +1,15 @@
-<p id="notice"><%= notice %></p>
+<% content_for :page_title do %>
+  <%= t('.title') %>
+<% end %>
 
-<h1>Catalogs</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Code</th>
-      <th>Parent code</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Active</th>
+      <th><%= attr_name Catalog, 'code' %></th>
+      <th><%= attr_name Catalog, 'parent_code' %></th>
+      <th><%= attr_name Catalog, 'name' %></th>
+      <th><%= attr_name Catalog, 'description' %></th>
+      <th><%= attr_name Catalog, 'active' %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,9 +22,9 @@
         <td><%= catalog.name %></td>
         <td><%= catalog.description %></td>
         <td><%= catalog.active %></td>
-        <td><%= link_to 'Show', catalog %></td>
-        <td><%= link_to 'Edit', edit_catalog_path(catalog) %></td>
-        <td><%= link_to 'Destroy', catalog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('action.show'),  catalog %></td>
+        <td><%= link_to t('action.edit'), edit_catalog_path(catalog) %></td>
+        <td><%= link_to t('action.destroy'), catalog, method: :delete, data: { confirm: t('message.confirm_destroy') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Catalog', new_catalog_path %>
+<%= link_to t('action.new'), new_catalog_path %>

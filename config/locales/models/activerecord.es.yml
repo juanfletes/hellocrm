@@ -4,12 +4,21 @@ es:
       customers:
         one: "cliente"
         other: "clientes"
+      catalogs:
+        one: "catálogo"
+        other: "catálogos"
     attributes:
       customer:
-        name: "Nombre"
+        name: "nombre"
         city: "ciudad"
         direction: "dirección"
         observation: "observación"
+        active: "activo"
+      catalog:
+        code: "código"
+        parent_code: "padre"
+        name: "nombre"
+        description: "descripción"
         active: "activo"
     errors:
       format: "%{attribute} %{message}"
